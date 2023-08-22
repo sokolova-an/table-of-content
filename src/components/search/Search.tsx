@@ -24,7 +24,12 @@ export default function Search({ refetch }: any) {
         placeholder="Search..."
         className={styles.input}
       />
-      <button className={styles.button} onClick={handleClick} type="submit">
+      <button
+        className={styles.button}
+        onClick={handleClick}
+        type="submit"
+        name="search"
+      >
         <CgSearch />
       </button>
     </form>
