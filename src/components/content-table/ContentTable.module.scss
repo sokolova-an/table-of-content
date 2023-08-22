@@ -1,0 +1,30 @@
+.list {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    height: 100%;
+    background-color: inherit;
+    width: 348px;
+    z-index: -1;
+  }
+}
+
+.light {
+  background-color: #f4f4f4;
+  li {
+    &:hover {
+      background-color: #e8e8e8 ; 
+    }
+  }
+}
+.dark {
+  background-color: #e8e8e8;
+  li {
+    &:hover {
+      background-color: #d1d1d2;
+    }
+  }
+}

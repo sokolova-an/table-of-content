@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 216px;
+  height: 100%;
+  min-height: 100vh;
+  padding: 24px 32px;
+  border-right: 2px solid lightgrey;
+}
+
+.main {
+  margin: 32px;
+}

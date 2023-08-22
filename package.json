@@ -6,17 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch",
+    "server": "nodemon server.js"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.32.6",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
+    "express": "^4.18.2",
     "next": "13.4.18",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1",
     "react": "18.2.0",
+    "react-content-loader": "^6.2.1",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-spring": "^9.7.2",
+    "sass": "^1.66.0",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.2.1",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2"
   }
 }

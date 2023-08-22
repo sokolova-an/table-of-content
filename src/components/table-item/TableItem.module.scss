@@ -1,0 +1,49 @@
+.icon {
+  margin-right: 4px;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.item {
+  padding: 8px 0;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    height: 100%;
+    background-color: inherit;
+    width: 348px;
+    z-index: -1;
+  }
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.light {
+  background-color: #f4f4f4;
+  &:hover {
+    background-color: #e8e8e8 !important;
+  }
+}
+.dark {
+  background-color: #e8e8e8 !important;
+  &:hover {
+    background-color: #d1d1d2 !important;
+  }
+}
+
+.activeItem {
+  background-color: #6b57ff !important;
+  color: white;
+  &:hover {
+    background-color: #6b57ff !important;
+    opacity: 0.9;
+  }
+}
