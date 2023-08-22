@@ -9,12 +9,12 @@ import styles from "./ContentTable.module.scss";
 export default function ContentTable({ pageId }: { pageId: string }) {
   const { pages, activePageId, setActivePageId } = useContext(PagesContext);
   const element = pages[pageId];
-  const [isOpen, setIsOpen] = useState(element?.isActive || false);
   const { mod, isPageActive, set, isParent } = useTable(
     activePageId,
     element,
     pages
   );
+  const [isOpen, setIsOpen] = useState(element?.isActive || isParent || false);
 
   const animation = useSpring({
     from: {
