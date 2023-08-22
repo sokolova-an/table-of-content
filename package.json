@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
-    "server": "nodemon server.js"
+    "server": "nodemon server/server.js"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.32.6",
