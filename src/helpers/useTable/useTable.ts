@@ -13,9 +13,7 @@ export const useTable = (
   const isActiveParent = element.id === pages[activePageId]?.parentId;
   let mod = "";
   if (isParent || isPageActive) {
-    if (level >= 1 && isActiveParent && pages[activePageId]?.pages) {
-      mod = "light";
-    } else if (level >= 1 && (isPageActive || isActiveParent)) {
+    if (level >= 1 && (isPageActive || isActiveParent)) {
       mod = "dark";
     } else {
       mod = "light";
