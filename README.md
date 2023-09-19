@@ -10,4 +10,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The server runs on http://localhost:5000/content
 
 ## Deployed on Vercel
-https://table-of-content-hrbg-sokolova-an.vercel.app/
+https://tree-content-structure.vercel.app/
