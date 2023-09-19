@@ -12,10 +12,13 @@ import styles from "./page.module.scss";
 
 export default function App() {
   const searchParams = useSearchParams();
-
+  const search = searchParams.get("search");
   const { data, isLoading, isError, refetch } = useQuery<IResponse>(
-    ["data", searchParams.get("search")],
-    getData
+    ["data", search],
+    getData,
+    {
+      refetchOnWindowFocus: false,
+    }
   );
 
   const [activePageId, setActivePageId] = useState("");
@@ -27,24 +30,25 @@ export default function App() {
   return (
     <div className={styles.app}>
       <aside className={styles.sidebar}>
-        <Search refetch={refetch} />
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <PagesContext.Provider
-            value={{
-              pages: data.entities.pages,
-              activePageId,
-              setActivePageId,
-            }}
-          >
-            {data.topLevelIds.map((item) => (
+        <PagesContext.Provider
+          value={{
+            pages: data?.entities.pages || {},
+            activePageId,
+            setActivePageId,
+            search,
+          }}
+        >
+          <Search refetch={refetch} defaultValue={search} />
+          {isLoading ? (
+            <Loader />
+          ) : (
+            data.topLevelIds.map((item) => (
               <ul key={item + "-ul"}>
                 <ContentTable pageId={item} />
               </ul>
-            ))}
-          </PagesContext.Provider>
-        )}
+            ))
+          )}
+        </PagesContext.Provider>
       </aside>
       <main className={styles.main}>Page</main>
     </div>
