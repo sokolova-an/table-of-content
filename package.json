@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
-    "server": "nodemon server/server.js"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.32.6",
@@ -16,13 +15,10 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "axios": "^1.4.0",
-    "cors": "^2.8.5",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
-    "express": "^4.18.2",
     "next": "13.4.18",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.0.1",
     "react": "18.2.0",
     "react-content-loader": "^6.2.1",
     "react-dom": "18.2.0",
